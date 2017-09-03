@@ -1,0 +1,99 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.fullWidth{
+    width:100%;
+}
+
+
+.img-container {
+  min-height: 750px;
+  background-image: url(../images/fire.gif);
+  background-size: 1200px 750px;
+  overflow: hidden;
+  width:100%;
+}
+
+.modalText {
+    padding-left: 50px;
+    font-size: 20px;
+}
+
+.footer {
+   position:fixed;
+   bottom:0px;
+   height:55px;
+   background-color: #212121;
+}
+
+.headText{
+    position: fixed;
+    top:0px;
+    height:55px;
+    background-color: #212121;
+}
+
+.parallaxMainText{
+    font-size: 50pt;
+    color:white;
+}
+
+
+.parallaxSubText{
+    font-size: 30px;
+    color: white;
+}
+
+.ghostBorder {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: border-color 0.3s ease-out,
+              color 0.3s ease-out;
+}
+.ghostBorder:hover, ghostBorder:active {
+  color: #c62828;
+  border-color: #c62828;
+  transition: border-color 0.4s ease-in,
+              color 0.4s ease-in;
+}
+
+.marginDown{
+    margin-top: 1.5%;
+}
+
+.marginTop{
+    margin-bottom: 2%;
+}
+
+.space{
+    height:100px;
+    background-color: #212121;
+}
+
+.moveOver{
+    float: right;
+    width: 100%;
+}
+
+.contentArea{
+    background-color: #b71c1c;
+}
+
+.nameHeading{
+    font-size: 30px;
+}
+
+.fullModal{
+    max-height: 100%;
+}
