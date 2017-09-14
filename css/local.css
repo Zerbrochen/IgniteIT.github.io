@@ -12,9 +12,9 @@ body {
 
 
 .img-container {
-  min-height: 750px;
+  min-height: 800px;
   background-image: url(../images/fire.gif);
-  background-size: 1200px 750px;
+  background-size: 1200px 800px;
   overflow: hidden;
   width:100%;
 }
