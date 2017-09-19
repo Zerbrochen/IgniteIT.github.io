@@ -7,6 +7,13 @@ $(document).ready(function(){
     $('.collapsible').collapsible();
   });
 
+var database = firebase.database();
+
+function writeUserData(email) {
+    database.ref(email).set({
+        email: email
+    });
+}
 
 function start(){
 
