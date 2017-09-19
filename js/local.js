@@ -16,7 +16,6 @@ function writeUserData(email) {
 }
 
 function start(){
-
     // Initialize Firebase
     var config = {
         apiKey: "AIzaSyD0Vx2Bfil4ZJqQR0W3Gpb7aJZyeVAynIU",
