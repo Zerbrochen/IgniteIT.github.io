@@ -27,14 +27,12 @@ body {
 .footer {
    position:fixed;
    bottom:0px;
-   height:55px;
    background-color: #212121;
 }
 
 .headText{
     position: fixed;
     top:0px;
-    height:55px;
     background-color: #212121;
 }
 
