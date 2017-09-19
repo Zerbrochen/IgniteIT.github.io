@@ -8,8 +8,8 @@ $(document).ready(function(){
   });
 
 
-<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-<script>
+
+
   // Initialize Firebase
   var config = {
     apiKey: "AIzaSyD0Vx2Bfil4ZJqQR0W3Gpb7aJZyeVAynIU",
@@ -20,5 +20,5 @@ $(document).ready(function(){
     messagingSenderId: "673494478669"
   };
   firebase.initializeApp(config);
-</script>
+
         
