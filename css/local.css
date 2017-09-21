@@ -12,7 +12,7 @@ body {
 
 
 .img-container {
-  min-height: 750px;
+  min-height: 700px;
   background-image: url(../images/fire.gif);
   background-size: 1200px 750px;
   overflow: hidden;
@@ -27,12 +27,14 @@ body {
 .footer {
    position:fixed;
    bottom:0px;
+   height:55px;
    background-color: #212121;
 }
 
 .headText{
     position: fixed;
     top:0px;
+    height:55px;
     background-color: #212121;
 }
 
@@ -40,6 +42,20 @@ body {
     font-size: 50pt;
     color:white;
 }
+.headerLine{
+   position:fixed;
+   top:55px;
+   height:1px;
+   background-color: orange;
+}
+ 
+.footerLine{
+   position:fixed;
+   bottom:55px;
+   height:1px;
+   background-color: orange;
+}
+
 
 
 .parallaxSubText{
@@ -51,8 +67,8 @@ body {
   display: inline-block;
   width: 200px;
   padding: 8px;
-  color: #fff;
-  border: 2px solid #fff;
+  color: white;
+  border: 2px solid white;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -60,8 +76,8 @@ body {
               color 0.3s ease-out;
 }
 .ghostBorder:hover, ghostBorder:active {
-  color: #c62828;
-  border-color: #c62828;
+  color:orangered;
+  border-color: orangered;
   transition: border-color 0.4s ease-in,
               color 0.4s ease-in;
 }
@@ -85,7 +101,7 @@ body {
 }
 
 .contentArea{
-    background-color: #b71c1c;
+    background-color: orange;
 }
 
 .nameHeading{
