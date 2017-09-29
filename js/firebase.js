@@ -8,7 +8,7 @@ function Load(){
 
 function readUserData(){
     var details;
-    database.ref('email/').on('value', function (snapshot) {
+    database.ref('email').on('value', function (snapshot) {
         console.log("debug");
         details = snapshot.val();
         console.log(details);
