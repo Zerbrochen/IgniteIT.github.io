@@ -29,14 +29,13 @@ Created by Thomas Musengwa and Triston Howard
 <body>
 <div class = "headerLine fullWidth"></div> 
 <div class="img-container valign-wrapper mainContent " id="topID">
-    
+
 	<div class=" headText fullWidth valign-wrapper moveOver right-align"></div>
 	<div class="center fullWidth marginTop ">
-		<!--<div onload="readUserData()" id="comp" class="parallaxMainText">-->
-		<!--Ignite IT Solutions-->
-		<!--</div>-->
-        <div class="parallaxMainText">Ignite IT Solutions</div>
-
+		<div class="parallaxMainText">
+		Ignite IT Solutions
+		</div>
+        <!--<div class="parallaxMainText">Ignite IT Solutions</div>-->
 		<div class="parallaxSubText">
 			Real, Relevant, Learning
 		</div>
@@ -46,7 +45,7 @@ Created by Thomas Musengwa and Triston Howard
 			<a href="#aboutUs" class="ghostBorder">About Us</a>
 			</div>
 			<div class="col s12 m4">
-			<a href="#ourTeam" class="ghostBorder">Our Team</a>
+			<a href="#ourTeam" onclick="ourTeam()" class="ghostBorder">Our Team</a>
 			</div>
 			<div class="col s12 m4">
 			<a href="#contactUs" class="ghostBorder">Contact Us</a>
@@ -81,10 +80,15 @@ Created by Thomas Musengwa and Triston Howard
       <h4 class="white-text">Our Team (Click Names to View Personal Projects) </h4>
     </div>
          <div class="row valign-wrapper">
-             <div class="col s3"><img class="square fullWidth" src="images/Triston.JPG" alt="triston"></div>
+             <div class="col s3"><img class="square fullWidth" id="photo" src="" alt="triston"></div>
         <div class="col s9">
-            <a href="#Triston"> <div class="nameHeading red-text">Triston Howard - Senior Developer</div> </a>
-          <div class="profileDescription white-text valign">Triston is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a versatile background in programming and mainly focuses on web development and administrative projects. This website is one of those projects. </div>
+            <a href="#Triston"> <div class="nameHeading red-text" id="name">
+            </div>
+                <div class="nameHeading red-text" id="title">
+            </div>
+            </a>
+
+          <div class="profileDescription white-text valign" id="description"></div>
        </div> </div>
         
         <div class="row valign-wrapper">
@@ -170,8 +174,6 @@ Created by Thomas Musengwa and Triston Howard
        </div>
 
    </div>
-<!--Import jQuery before materialize.js-->
-
 </body>
 </html>
     

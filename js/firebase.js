@@ -1,24 +1,33 @@
 //firebase.js
 
-var database = firebase.database();
-
-function Load(){
-    alert("????");
-}
-
-function readUserData(){
-    var details;
-    database.ref('email').on('value', function (snapshot) {
-        console.log("debug");
-        details = snapshot.val();
-        console.log(details);
-        document.getElementById("comp").innerHTML = details;
+function ourTeam(){
+    var fName;
+    var title;
+    var description;
+    firebase.database().ref('/student1/name').once('value').then(function(snapshot){
+        fName = snapshot.val();
+        console.log("Name =", snapshot.val());
+        document.getElementById("name").innerHTML = snapshot.val();
     });
-    console.log("ran 'readUserData' Function");
+    firebase.database().ref('/student1/description').once('value').then(function(snapshot) {
+        description = snapshot.val();
+        console.log("description =", snapshot.val());
+        document.getElementById("description").innerHTML = snapshot.val();
+    });
+    firebase.database().ref('/student1/title').once('value').then(function(snapshot) {
+        title = snapshot.val();
+    console.log("title = ", snapshot.val());
+        document.getElementById("title").innerText = snapshot.val();
+    });
+    firebase.database().ref('/student1/photo').once('value').then(function(snapshot) {
+        console.log("photo URL = ", snapshot.val());
+        document.getElementById("photo").src =snapshot.val();
+    });
+
 }
 
 function writeUserData() {
-    firebase.database().ref('email/').set({
+    firebase.database().ref('/email/').set({
         email: email
     });
 }
