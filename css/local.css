@@ -9,7 +9,19 @@ body {
 .fullWidth{
     width:100%;
 }
-
+.formattedTitle{
+    display:inline-block;
+    height:10%;
+    width:100%;
+}
+.floatLeft{
+    float:left;
+}
+.middle{
+    float:left;
+    padding-left:10px;
+    padding-right:10px;
+}
 
 .img-container {
   min-height: 700px;

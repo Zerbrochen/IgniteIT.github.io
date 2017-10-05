@@ -1,9 +1,9 @@
 //firebase.js
-
 function ourTeam(){
     var fName;
     var title;
     var description;
+
     firebase.database().ref('/student1/name').once('value').then(function(snapshot){
         fName = snapshot.val();
         console.log("Name =", snapshot.val());
@@ -21,13 +21,13 @@ function ourTeam(){
     });
     firebase.database().ref('/student1/photo').once('value').then(function(snapshot) {
         console.log("photo URL = ", snapshot.val());
-        document.getElementById("photo").src =snapshot.val();
+        document.getElementById("photo").src = snapshot.val();
     });
-
 }
-
 function writeUserData() {
     firebase.database().ref('/email/').set({
         email: email
     });
 }
+
+
