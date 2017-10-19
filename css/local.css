@@ -9,9 +9,12 @@ body {
 .fullWidth{
     width:100%;
 }
+.space{
+    padding-right: 8px;
+}
 .formattedTitle{
     display:inline-block;
-    height:10%;
+    height:60px;
     width:100%;
 }
 .floatLeft{
