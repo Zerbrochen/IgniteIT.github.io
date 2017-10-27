@@ -1,10 +1,10 @@
-
 <!DOCTYPE html>
 <!-- 
 Website is for Ignite IT studies
 Created by Thomas Musengwa and Triston Howard
 -->
 <html>
+
 <head>
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase-database.js"></script>
@@ -15,83 +15,85 @@ Created by Thomas Musengwa and Triston Howard
     <script type="text/javascript" src="js/firebase.js"></script>
 
     <!--Import materialize.css-->
-  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
-  <link type="text/css" rel="stylesheet" href="css/local.css"  media="screen,projection"/>
-  
-   <!--Import Google Icon Font-->
-  
-  <!--Let browser know website is optimized for mobile-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/local.css" media="screen,projection" />
+
+    <!--Import Google Icon Font-->
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title> Ignite IT</title>
-     <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
 </head>
 
 <body>
-<div class = "headerLine fullWidth"></div> 
-<div class="img-container valign-wrapper mainContent " id="topID">
+    <div class="headerLine fullWidth"></div>
+    <div class="img-container valign-wrapper mainContent " id="topID">
 
-	<div class=" headText fullWidth valign-wrapper moveOver right-align"></div>
-	<div class="center fullWidth marginTop ">
-		<div class="parallaxMainText">
-		Ignite IT Solutions
-		</div>
-        <!--<div class="parallaxMainText">Ignite IT Solutions</div>-->
-		<div class="parallaxSubText">
-			Real, Relevant, Learning
-		</div>
-		<div class="row container marginDown">
-		
-			<div class="col s12 m4">
-			<a href="#aboutUs" class="ghostBorder">About Us</a>
-			</div>
-			<div class="col s12 m4">
-			<a href="#ourTeam" onclick="ourTeam()" class="ghostBorder">Our Team</a>
-			</div>
-			<div class="col s12 m4">
-			<a href="#contactUs" class="ghostBorder">Contact Us</a>
-			</div>
-			
-		</div>
-	</div>		
-    <div class = "footerLine fullWidth"></div> 
-	<div class="footer fullWidth "> 
-</div>
-</div>
-    
-	
-	 <!-- Modal Trigger -->
- 
-  <!-- Modal Structure -->
-  <div id="aboutUs" class="modal bottom-sheet grey darken-4">
-    <div class="modal-content">
-      <h4 class="white-text">About Us</h4>
+        <div class=" headText fullWidth valign-wrapper moveOver right-align"></div>
+        <div class="center fullWidth marginTop ">
+            <div class="parallaxMainText">
+                Ignite IT Solutions
+            </div>
+            <!--<div class="parallaxMainText">Ignite IT Solutions</div>-->
+            <div class="parallaxSubText">
+                Real, Relevant, Learning
+            </div>
+            <div class="row container marginDown">
+
+                <div class="col s12 m4">
+                    <a href="#aboutUs" class="ghostBorder">About Us</a>
+                </div>
+                <div class="col s12 m4">
+                    <a href="#ourTeam" onclick="ourTeam()" class="ghostBorder">Our Team</a>
+                </div>
+                <div class="col s12 m4">
+                    <a href="#contactUs" class="ghostBorder">Contact Us</a>
+                </div>
+
+            </div>
+        </div>
+        <div class="footerLine fullWidth"></div>
+        <div class="footer fullWidth ">
+        </div>
     </div>
-      
-      <p class="white-text modalText">Ignite is out to change the conversation about 
-      preparing students for the opportunities in our community and beyond.
-     Today’s workforce, whether in a professional skilled trade, startup, or Fortune 500 company requires STEM and professional, business, and finance skills. Ignite career strands are designed to align with future opportunities in the community.</p>
-    <div class="modal-footer grey darken-4">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+
+
+    <!-- Modal Trigger -->
+
+    <!-- Modal Structure -->
+    <div id="aboutUs" class="modal bottom-sheet grey darken-4">
+        <div class="modal-content">
+            <h4 class="white-text">About Us</h4>
+        </div>
+
+        <p class="white-text modalText">Ignite is out to change the conversation about preparing students for the opportunities in our community and beyond.
+            Today’s workforce, whether in a professional skilled trade, startup, or Fortune 500 company requires STEM and
+            professional, business, and finance skills. Ignite career strands are designed to align with future opportunities
+            in the community.</p>
+        <div class="modal-footer grey darken-4">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+        </div>
     </div>
-  </div>
-  
+
     <div id="ourTeam" class="modal bottom-sheet grey darken-4">
-    <div class="modal-content">
-      <h4 class="white-text">Our Team (Click Names to View Personal Projects) </h4>
-    </div>
-         <div class="row valign-wrapper">
-             <div class="col s3"><img class="square fullWidth" id="photo" src="" alt="triston"></div>
-                <div class="col s9">
+        <div class="modal-content">
+            <h4 class="white-text">Our Team (Click Names to View Personal Projects) </h4>
+        </div>
+        <div class="row valign-wrapper">
+            <div class="col s3"><img class="square fullWidth" id="photo" src="" alt="triston"></div>
+            <div class="col s9">
                 <a href="#Triston">
-                <div class="formattedTitle">
-                    <div class="nameHeading red-text floatLeft space" id="Fname"></div>
-                    <div class="nameHeading red-text floatLeft" id="Lname"></div>
-                    <a class = "nameHeading red-text middle"> - </a>
-                    <div  class="nameHeading red-text floatLeft" id="title"></div>
-            </div></a>
-          <div class="profileDescription white-text" id="description"></div>
-       </div>
-      </div>
+                    <div class="formattedTitle">
+                        <div class="nameHeading red-text floatLeft space" id="Fname"></div>
+                        <div class="nameHeading red-text floatLeft" id="Lname"></div>
+                        <a class="nameHeading red-text middle"> - </a>
+                        <div class="nameHeading red-text floatLeft" id="title"></div>
+                    </div>
+                </a>
+                <div class="profileDescription white-text" id="description"></div>
+            </div>
+        </div>
 
         <div class="row valign-wrapper">
             <div class="col s3"><img class="square fullWidth" id="photo2" src="" alt="Thomas"></div>
@@ -100,9 +102,10 @@ Created by Thomas Musengwa and Triston Howard
                     <div class="formattedTitle">
                         <div class="nameHeading red-text floatLeft space" id="Fname2"></div>
                         <div class="nameHeading red-text floatLeft" id="Lname2"></div>
-                        <a class = "nameHeading red-text middle"> - </a>
-                        <div  class="nameHeading red-text floatLeft" id="title2"></div>
-                    </div></a>
+                        <a class="nameHeading red-text middle"> - </a>
+                        <div class="nameHeading red-text floatLeft" id="title2"></div>
+                    </div>
+                </a>
                 <div class="profileDescription white-text" id="description2"></div>
             </div>
         </div>
@@ -114,96 +117,98 @@ Created by Thomas Musengwa and Triston Howard
                     <div class="formattedTitle">
                         <div class="nameHeading red-text floatLeft space" id="Fname3"></div>
                         <div class="nameHeading red-text floatLeft" id="Lname3"></div>
-                        <a class = "nameHeading red-text middle"> - </a>
-                        <div  class="nameHeading red-text floatLeft" id="title3"></div>
-                    </div></a>
+                        <a class="nameHeading red-text middle"> - </a>
+                        <div class="nameHeading red-text floatLeft" id="title3"></div>
+                    </div>
+                </a>
                 <div class="profileDescription white-text" id="description3"></div>
             </div>
         </div>
         <!---->
         <!--<div class="row valign-wrapper">-->
-             <!--<div class="col s3"><img class="square fullWidth" src="" alt="Thomas"></div>-->
+        <!--<div class="col s3"><img class="square fullWidth" src="" alt="Thomas"></div>-->
         <!--<div class="col s9">-->
-            <!--<a href="#thomas"> <div class="nameHeading red-text">Thomas Musengwa - Senior Developer</div> </a>-->
-          <!--<div class="profileDescription white-text valign">Thomas is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a database background in programming and mainly focuses on app development projects. </div>-->
-       <!--</div> </div>-->
+        <!--<a href="#thomas"> <div class="nameHeading red-text">Thomas Musengwa - Senior Developer</div> </a>-->
+        <!--<div class="profileDescription white-text valign">Thomas is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a database background in programming and mainly focuses on app development projects. </div>-->
+        <!--</div> </div>-->
         <!---->
         <!--<div class="row valign-wrapper">-->
-             <!--<div class="col s3"><img class="square fullWidth" src="images/Reetik.JPG" alt="reetik"></div>-->
+        <!--<div class="col s3"><img class="square fullWidth" src="images/Reetik.JPG" alt="reetik"></div>-->
         <!--<div class="col s9">-->
-            <!--<a href="#reetik"> <div class="nameHeading red-text">Reetik Patel - Senior Developer</div> </a>-->
-          <!--<div class="profileDescription white-text valign">Reetik is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a versatile background in programming and mainly focuses on software development as well as hardware tinkering. </div>-->
-       <!--</div> </div>-->
+        <!--<a href="#reetik"> <div class="nameHeading red-text">Reetik Patel - Senior Developer</div> </a>-->
+        <!--<div class="profileDescription white-text valign">Reetik is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a versatile background in programming and mainly focuses on software development as well as hardware tinkering. </div>-->
+        <!--</div> </div>-->
         <!---->
-        
-        
-    <div class="modal-footer grey darken-4">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+
+
+        <div class="modal-footer grey darken-4">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+        </div>
     </div>
-  </div>
-    
+
     <div id="Triston" class="modal top-sheet grey darken-4">
         <div class="modal-content">
-      <h4 class="white-text">Triston's Projects</h4>
+            <h4 class="white-text">Triston's Projects</h4>
+        </div>
+        <div class="profileDescription white-text"><a href="zerbrochen.github.io">Project 1</a></div>
     </div>
-        <div class= "profileDescription white-text"><a href="zerbrochen.github.io">Project 1</a></div>
-    </div>
-    
-     <div id="thomas" class="modal top-sheet grey darken-4">
+
+    <div id="thomas" class="modal top-sheet grey darken-4">
         <div class="modal-content">
-      <h4 class="white-text">Thomas' Projects</h4>
+            <h4 class="white-text">Thomas' Projects</h4>
+        </div>
+        <div class="profileDescription white-text"><a href="linkedIn.com">Project 1</a></div>
     </div>
-        <div class= "profileDescription white-text"><a href="linkedIn.com">Project 1</a></div>
-    </div>
-    
-     <div id="reetik" class="modal top-sheet grey darken-4">
+
+    <div id="reetik" class="modal top-sheet grey darken-4">
         <div class="modal-content">
-      <h4 class="white-text">Reetik's Projects</h4>
+            <h4 class="white-text">Reetik's Projects</h4>
+        </div>
+        <div class="profileDescription white-text"><a href="http://materializecss.com/color.html.com">Project 1</a></div>
     </div>
-        <div class= "profileDescription white-text"><a href="http://materializecss.com/color.html.com">Project 1</a></div>
+
+
+    <div id="contactUs" class="modal bottom-sheet grey darken-4">
+        <div class="modal-content">
+            <h4 class="white-text">Contact Us</h4>
+        </div>
+        <div class="row">
+            <form id="contact" class="col s12">
+                <div class="row">
+                    <div class="input-field col s6">
+                        <input type="text" name="first_Name" title="first_Name" class="white-text validate">
+                        <label>First Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input name="last_Name" type="text" title="last_Name" class="white-text validate">
+                        <label>Last Name</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input name="Email" id="email" type="email" title="email" class="white-text validate">
+                        <label>Email</label>
+                    </div>
+                    <div class="input-field col s6">
+                        <input type="text" title="Message" class="white-text validate">
+                        <label>Message</label>
+                    </div>
+                </div>
+                <div type="text/plain" method="submit" action="submit">
+
+                    <div class="row">
+                        <div class="col m6 s12">
+                            <button class="waves-effect waves-light grey darken-3 btn" form="contact" onclick="writeUserData()" type="submit" value="submit"
+                                name="submit">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer grey darken-4">
+            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+        </div>
+
     </div>
-
-
-   <div id="contactUs" class="modal bottom-sheet grey darken-4">
-    <div class="modal-content">
-      <h4 class="white-text">Contact Us</h4>
-    </div>
-       <div class="row">
-           <form id="contact" class="col s12">
-               <div class="row">
-                   <div class="input-field col s6">
-                       <input type="text" name="first_Name" title="first_Name" class="white-text validate">
-                       <label>First Name</label>
-                   </div>
-                   <div class="input-field col s6">
-                       <input name="last_Name" type="text" title="last_Name" class="white-text validate">
-                       <label>Last Name</label>
-                   </div>
-                   <div class="input-field col s6">
-                       <input name="Email" id="email" type="email" title="email" class="white-text validate">
-                       <label>Email</label>
-                   </div>
-                   <div class="input-field col s6">
-                       <input type="text" title="Message" class="white-text validate">
-                       <label>Message</label>
-                   </div>
-               </div>
-               <div type="text/plain" method="submit" action="submit">
-
-               <div class="row">
-                   <div class="col m6 s12">
-                       <button class="waves-effect waves-light grey darken-3 btn" form="contact" onclick="writeUserData()" type="submit" value="submit" name="submit">Submit</button>
-                   </div>
-               </div>
-               </div>
-           </form>
-       </div>
-
-       <div class="modal-footer grey darken-4">
-           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
-       </div>
-
-   </div>
 </body>
+
 </html>
-    
