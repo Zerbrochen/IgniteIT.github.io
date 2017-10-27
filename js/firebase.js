@@ -172,7 +172,7 @@ $('#newActivity').submit(function(event) {
   //put new object in data array
  // data.push(theMessage);
   console.log([data]);
-    data[0] = theMessage;
+    data[data.length] = theMessage;
     
   /*  var myArray = new Array(data.length);
     myArray[0] = theMessage;
