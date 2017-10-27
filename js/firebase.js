@@ -160,26 +160,33 @@ $('#newActivity').submit(function(event) {
   
   
   
-  
+   var fName = $('#first_Name').val();
+  console.log(theMessage);
+    var lName = $('#last_Name').val();
+  console.log(theMessage);
+    var email = $('#email').val();
+  console.log(theMessage);
   var theMessage = $('#messages').val();
   console.log(theMessage);
   
   //take the values from the form, and put them in an object
   var newActivity= {
-    
-    "mesage": theMessage
+    "First Name" : fName,
+    "Last Name" : lName,
+    "Email" : email,
+    "Message" : theMessage
   }
   //put new object in data array
  // data.push(theMessage);
   console.log([data]);
-    data[data.length] = theMessage;
+    data[data.length] = newActivity;
     
   /*  var myArray = new Array(data.length);
     myArray[0] = theMessage;
 for (var i = 0; i < myArray.length; i++) {
   myArray[i] = data[i];
 }*/
-      console.log(theMessage);
+      console.log([data.length]);
     alert("Submitted!!!");
   
     //send the new data to Firebase
