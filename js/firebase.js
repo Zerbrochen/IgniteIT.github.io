@@ -32,13 +32,35 @@ function ourTeam(){
         document.getElementById("photo").src = snapshot.val();
     });
     Thomas();
-    retik();
+    retik(); 
 }
-function writeUserData() {
-    firebase.database().ref('/email/').set({
-        email: email
+// Import Admin SDK
+var database = firebase.database();
+ 
+
+/*function writeUserData(message) {
+    var data= [];
+    var ref= new Firebase('https://ignitedb-253e0.firebaseio.com/');
+  
+ 
+    var theMessage = $('#messages').val();
+  console.log(theMessage);
+    var newActivity= {
+    "userMessage": theMessage,
+    }
+     data.push(newActivity);
+  console.log(data);
+    ref.set(data, function(err){
+      if(err){
+        alert("Data no go");
+      }
     });
-}
+  var messages = firebase.database().ref('/userMessage/');
+    messages.set({
+        message : message
+    })
+  
+}*/
 
 function retik() {
     var fName2;
@@ -109,3 +131,64 @@ function loop() {
         ourTeam();
     }
 }
+$(function(){
+    //firebase.initializeApp(config);
+  //make a variable to keep track of data coming from firebase
+  var data= [];
+  
+  //create new connection to firebase
+	var ref= firebase.database().ref('/userMessage/message');
+  
+
+  //listen to data updates from firebase
+	ref.on("value", function (snapshot){
+    console.log(snapshot.val());
+   //when the data updates at firebase, put it in the data variable
+    data= snapshot.val();
+    
+  })
+//Entire Form (handler)
+$('#newActivity').submit(function(event) {
+  
+  var $form = $(this);
+  console.log("Submit to Firebase");
+  
+  //disable submit button
+  $form.find("#saveForm").prop('disabled', true);
+  
+  //get values to send to Firebase
+  
+  
+  
+  
+  var theMessage = $('#messages').val();
+  console.log(theMessage);
+  
+  //take the values from the form, and put them in an object
+  var newActivity= {
+    
+    "mesage": theMessage
+  }
+  //put new object in data array
+ // data.push(theMessage);
+  console.log([data]);
+    data[0] = theMessage;
+    
+  /*  var myArray = new Array(data.length);
+    myArray[0] = theMessage;
+for (var i = 0; i < myArray.length; i++) {
+  myArray[i] = data[i];
+}*/
+      console.log(theMessage);
+  
+    //send the new data to Firebase
+		ref.set(data, function(err){
+      if(err){
+        alert("Data no go");
+      }
+    });
+
+    return false;
+  })
+  
+})

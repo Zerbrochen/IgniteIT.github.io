@@ -27,7 +27,7 @@ body {
 }
 
 .img-container {
-  min-height: 700px;
+  min-height: 750px;
   background-image: url(../images/fire.gif);
   background-size: 1200px 750px;
   overflow: hidden;

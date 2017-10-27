@@ -169,7 +169,7 @@ Created by Thomas Musengwa and Triston Howard
       <h4 class="white-text">Contact Us</h4>
     </div>
        <div class="row">
-           <form id="contact" class="col s12">
+           <form id="newActivity" class="col s12">
                <div class="row">
                    <div class="input-field col s6">
                        <input type="text" name="first_Name" title="first_Name" class="white-text validate">
@@ -184,18 +184,26 @@ Created by Thomas Musengwa and Triston Howard
                        <label>Email</label>
                    </div>
                    <div class="input-field col s6">
-                       <input type="text" title="Message" class="white-text validate">
+                       <input type="text" id = "messages" title="message" class="white-text validate">
                        <label>Message</label>
                    </div>
+                   
                </div>
                <div type="text/plain" method="submit" action="submit">
 
                <div class="row">
                    <div class="col m6 s12">
-                       <button class="waves-effect waves-light grey darken-3 btn" form="contact" onclick="writeUserData()" type="submit" value="submit" name="submit">Submit</button>
+                       <button class="waves-effect waves-light grey darken-3 btn" id = saveForm form="contact" type="submit" value="New Activity" name="saveForm">Submit</button>
+                       <input id="saveForm" name="saveForm" type="submit" value="New Activity"></input>
+                      
+                       
                    </div>
                </div>
+                   
+                   
+                   
                </div>
+               
            </form>
        </div>
 
