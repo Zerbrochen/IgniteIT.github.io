@@ -180,15 +180,19 @@ for (var i = 0; i < myArray.length; i++) {
   myArray[i] = data[i];
 }*/
       console.log(theMessage);
+    alert("Submitted!!!");
   
     //send the new data to Firebase
 		ref.set(data, function(err){
+            
       if(err){
         alert("Data no go");
       }
     });
+    setTimeout(function() { window.location.reload(); }, 100);
 
     return false;
   })
   
 })
+
