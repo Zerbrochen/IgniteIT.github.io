@@ -1,26 +1,12 @@
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+This website is used for Bentonville High's Ignite professional studies program, more specifically the IT solutions strand. 
 
+Authors: Triston Howard (front-end, db configuration and setup, 'contact us' form handle)
+        Thomas Musengwa (js services, db configuration and setup)
 
-Hi there! Welcome to Cloud9 IDE!
+Contributions: The students in the IT strand for their information used for bios.
 
-To get you started, we included a small hello world application.
-
-1) Open the hello-world.html file
-
-2) Click on the Preview button to open a live preview pane
-
-3) Make some changes to the file, save, watch the preview, and have fun!
-
-Happy coding!
-The Cloud9 IDE team
-
-
-## Support & Documentation
-
-Visit http://docs.c9.io for documentation, or http://support.c9.io for support.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
+Special Thanks: John Mark Russell for his encouragement and recommendation for this project.
+                Thomas for his contribution to the site.
+                Adithya for the front end design idea.
+                
+        

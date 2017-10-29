@@ -38,29 +38,7 @@ function ourTeam(){
 var database = firebase.database();
  
 
-/*function writeUserData(message) {
-    var data= [];
-    var ref= new Firebase('https://ignitedb-253e0.firebaseio.com/');
-  
- 
-    var theMessage = $('#messages').val();
-  console.log(theMessage);
-    var newActivity= {
-    "userMessage": theMessage,
-    }
-     data.push(newActivity);
-  console.log(data);
-    ref.set(data, function(err){
-      if(err){
-        alert("Data no go");
-      }
-    });
-  var messages = firebase.database().ref('/userMessage/');
-    messages.set({
-        message : message
-    })
-  
-}*/
+
 
 function retik() {
     var fName2;
@@ -124,15 +102,9 @@ function Thomas() {
     });
 }
 
-function loop() {
-    var i;
-    var students = 1;
-    for (i = 0; i < students; i++) {
-        ourTeam();
-    }
-}
+// contact us forms (writes to db now)
 $(function(){
-    //firebase.initializeApp(config);
+   
   //make a variable to keep track of data coming from firebase
   var data= [];
   
@@ -161,11 +133,11 @@ $('#newActivity').submit(function(event) {
   
   
    var fName = $('#first_Name').val();
-  console.log(theMessage);
+  console.log(fName);
     var lName = $('#last_Name').val();
-  console.log(theMessage);
+  console.log(lName);
     var email = $('#email').val();
-  console.log(theMessage);
+  console.log(email);
   var theMessage = $('#messages').val();
   console.log(theMessage);
   
@@ -177,17 +149,11 @@ $('#newActivity').submit(function(event) {
     "Message" : theMessage
   }
   //put new object in data array
- // data.push(theMessage);
-  console.log([data]);
     data[data.length] = newActivity;
     
-  /*  var myArray = new Array(data.length);
-    myArray[0] = theMessage;
-for (var i = 0; i < myArray.length; i++) {
-  myArray[i] = data[i];
-}*/
-      console.log([data.length]);
+    
     alert("Submitted!!!");
+    
   
     //send the new data to Firebase
 		ref.set(data, function(err){
