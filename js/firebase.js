@@ -114,7 +114,7 @@ $(function(){
 
   //listen to data updates from firebase
 	ref.on("value", function (snapshot){
-    console.log(snapshot.val());
+   
    //when the data updates at firebase, put it in the data variable
     data= snapshot.val();
     
