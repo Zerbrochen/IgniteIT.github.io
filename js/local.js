@@ -7,4 +7,6 @@ $(document).ready(function(){
 $(document).ready(function(){
     $('.collapsible').collapsible();
 });
-
+$(function(){   
+    $('.tooltipped').tooltip({delay: 50}); 
+});

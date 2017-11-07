@@ -71,6 +71,14 @@ body {
    background-color: orange;
 }
 
+.modalHead{
+    padding-left: 50px;
+    font-size: 20px;
+    position: fixed;
+    top: 0px;
+    height: 70px;
+}
+
 
 
 .parallaxSubText{
@@ -126,3 +134,9 @@ body {
 .fullModal{
     max-height: 100%;
 }
+#toast-container {
+    position: fixed !important;
+    bottom: 500px !important;
+    right: 300px !important;
+}
+

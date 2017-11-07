@@ -13,12 +13,16 @@ Created by Thomas Musengwa and Triston Howard
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/local.js"></script>
     <script type="text/javascript" src="js/firebase.js"></script>
+    <script type="text/javascript" src="js/rotate.js"></script>
+    
+    
 
     <!--Import materialize.css-->
   <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
   <link type="text/css" rel="stylesheet" href="css/local.css"  media="screen,projection"/>
   
    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
   
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -33,11 +37,18 @@ Created by Thomas Musengwa and Triston Howard
 	<div class=" headText fullWidth valign-wrapper moveOver right-align"></div>
 	<div class="center fullWidth marginTop ">
 		<div class="parallaxMainText">
-		Ignite IT Solutions
+        Ignite IT Solutions
+		
 		</div>
         <!--<div class="parallaxMainText">Ignite IT Solutions</div>-->
+        
+        
 		<div class="parallaxSubText">
-			Real, Relevant, Learning
+             <span
+     class="txt-rotate"
+     data-period="2000"
+     data-rotate='[ "Real, Relevant, Learning" ]'></span>
+			
 		</div>
 		<div class="row container marginDown">
 		
@@ -62,7 +73,7 @@ Created by Thomas Musengwa and Triston Howard
 	 <!-- Modal Trigger -->
  
   <!-- Modal Structure -->
-  <div id="aboutUs" class="modal bottom-sheet grey darken-4">
+  <div id="submitted" class="modal bottom-sheet grey darken-4">
     <div class="modal-content">
       <h4 class="white-text">About Us</h4>
     </div>
@@ -71,7 +82,7 @@ Created by Thomas Musengwa and Triston Howard
       preparing students for the opportunities in our community and beyond.
      Today’s workforce, whether in a professional skilled trade, startup, or Fortune 500 company requires STEM and professional, business, and finance skills. Ignite career strands are designed to align with future opportunities in the community.</p>
     <div class="modal-footer grey darken-4">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat white-text">Back</a>
     </div>
   </div>
   
@@ -138,7 +149,7 @@ Created by Thomas Musengwa and Triston Howard
         
         
     <div class="modal-footer grey darken-4">
-      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+      <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat white-text">Back</a>
     </div>
   </div>
     
@@ -189,23 +200,26 @@ Created by Thomas Musengwa and Triston Howard
                    </div>
                    
                </div>
-               <div type="text/plain" method="submit" action="submit">
+               <div class="toast-container" type="text/plain" method="submit" onclick="Materialize.toast('Submitted!!', 4000)" action="submit">
 
                <div class="row">
                    <div class="col m6 s12">
-                       
-<input id="saveForm" class="waves-effect waves-light grey darken-3 btn" name="saveForm" type="submit" >
+                 
+<input id="saveForm" class=" waves-effect waves-red grey darken-3 btn" name="saveForm" type="submit" >
                        </input>
-                     </div>
+                   </div>
                   </div>     
                 </div>
             </form>
        </div>
         <div class="modal-footer grey darken-4">
-           <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
+           <a href="#!" class=" modal-action modal-close waves-effect waves-red btn-flat white-text">Back</a>
        </div>
 
    </div>
+    
+    
 </body>
+
 </html>
     

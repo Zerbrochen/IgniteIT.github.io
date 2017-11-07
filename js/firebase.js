@@ -109,7 +109,7 @@ $(function(){
   var data= [];
   
   //create new connection to firebase
-	var ref= firebase.database().ref('/userMessage/message');
+	var ref= firebase.database().ref('/userMessage/message/');
   
 
   //listen to data updates from firebase
@@ -119,6 +119,9 @@ $(function(){
     data= snapshot.val();
     
   })
+    
+   
+    
 //Entire Form (handler)
 $('#newActivity').submit(function(event) {
   
@@ -150,11 +153,7 @@ $('#newActivity').submit(function(event) {
   }
   //put new object in data array
     data[data.length] = newActivity;
-    
-    
-    alert("Submitted!!!");
-    
-  
+   
     //send the new data to Firebase
 		ref.set(data, function(err){
             
@@ -162,7 +161,7 @@ $('#newActivity').submit(function(event) {
         alert("Data no go");
       }
     });
-    setTimeout(function() { window.location.reload(); }, 100);
+    setTimeout(function() { window.location.reload(); }, 4000);
 
     return false;
   })
