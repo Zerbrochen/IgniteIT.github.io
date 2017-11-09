@@ -6,14 +6,18 @@ Created by Thomas Musengwa and Triston Howard
 -->
 <html>
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.4.0/firebase-database.js"></script>
     <script type="text/javascript" src="js/inItFirebase.js"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/local.js"></script>
     <script type="text/javascript" src="js/firebase.js"></script>
     <script type="text/javascript" src="js/rotate.js"></script>
+   
+    
     
     
 
@@ -23,6 +27,7 @@ Created by Thomas Musengwa and Triston Howard
   
    <!--Import Google Icon Font-->
     <link href="https://fonts.googleapis.com/css?family=Raleway:200,100,400" rel="stylesheet" type="text/css" />
+    
   
   <!--Let browser know website is optimized for mobile-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -36,29 +41,28 @@ Created by Thomas Musengwa and Triston Howard
 
 	<div class=" headText fullWidth valign-wrapper moveOver right-align"></div>
 	<div class="center fullWidth marginTop ">
-		<div class="parallaxMainText">
-        Ignite IT Solutions
+		<div class="parallaxMainText floating">
+  <div id="port">Ignite IT Solutions</div>
 		
 		</div>
-        <!--<div class="parallaxMainText">Ignite IT Solutions</div>-->
         
         
-		<div class="parallaxSubText">
-             <span
+		<div class="parallaxSubText floating"> Real, Relevant, 
+<span
      class="txt-rotate"
      data-period="2000"
-     data-rotate='[ "Real, Relevant, Learning" ]'></span>
+     data-rotate='[ "Learning","Programming","Practices","Technology","People","Businesses"]'></span>
 			
 		</div>
 		<div class="row container marginDown">
 		
-			<div class="col s12 m4">
+			<div class="col s12 m4 floating">
 			<a href="#aboutUs" class="ghostBorder">About Us</a>
 			</div>
-			<div class="col s12 m4">
+			<div class="col s12 m4 floating">
 			<a href="#ourTeam" onclick="ourTeam()" class="ghostBorder">Our Team</a>
 			</div>
-			<div class="col s12 m4">
+			<div class="col s12 m4 floating">
 			<a href="#contactUs" class="ghostBorder">Contact Us</a>
 			</div>
 			
