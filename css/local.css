@@ -33,11 +33,14 @@ body {
   background-size: 1200px 750px;
   overflow: hidden;
   width:100%;
+    
 }
 
 .modalText {
     padding-left: 50px;
     font-size: 20px;
+    color: orange;
+    
 }
 
 .footer {
@@ -55,10 +58,12 @@ body {
 }
 
 .parallaxMainText{
+    font-family: 'Satisfy', serif;
     font-size: 50pt;
-    color:white;
-    transition: color 0.3s ease-out,
-              color 0.3s ease-out;
+    color:orangered;
+     animation: colorchange 20s 5 infinite forwards;
+    -webkit-animation:colorchange 20s infinite alternate;
+   
 }
 .headerLine{
    position:fixed;
@@ -80,23 +85,25 @@ body {
     position: fixed;
     top: 0px;
     height: 70px;
+    
 }
 
 
 
 .parallaxSubText{
     font-size: 30px;
-    color: white;
-     transition: color 0.3s ease-out,
-              color 0.3s ease-out;
+    color: orangered;
+     -webkit-animation:colorchange 20s infinite alternate;
+    
+    
 }
 
 .ghostBorder {
   display: inline-block;
   width: 200px;
   padding: 8px;
-  color: white;
-  border: 2px solid white;
+  color: orangered;
+  border: 2px solid orange;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -104,23 +111,13 @@ body {
               color 0.3s ease-out;
 }
 .ghostBorder:hover, ghostBorder:active {
-  color:orangered;
+  color:orange;
   border-color: orangered;
   transition: border-color 0.4s ease-in,
               color 0.4s ease-in;
 }
-.parallaxSubText:hover, parallaxSubText:active {
-  color:orangered;
-  border-color: orangered;
-  transition: color 0.4s ease-in,
-              color 0.4s ease-out;
-}
-.parallaxMainText:hover, parallaxMainText:active {
-  color:orangered;
-  border-color: orangered;
-  transition: color 0.4s ease-in,
-              color 0.4s ease-out;
-}
+
+
 
 .marginDown{
     margin-top: 1.5%;
@@ -142,7 +139,7 @@ body {
 }
 
 .contentArea{
-    background-color: orange;
+    background-color: black;
 }
 
 .nameHeading{
@@ -158,11 +155,11 @@ body {
     right: 300px !important;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Raleway:400,700';
+@import 'https://fonts.googleapis.com/css?family=Tangerine:400,700';
 
 #replay{
   float: right;
-  font-family: 'Raleway';
+  font-family: 'Spectral-SC';
   font-size: 20px;
   color: black;
   text-transform: uppercase;
@@ -175,23 +172,29 @@ body {
 
 #port{
   clear: right;
+     animation: colorchange 20s 5 infinite forwards;
+    -webkit-animation:colorchange 20s infinite alternate;
 }
 
-div move {
+inside {
+    
   display: inline-block;
-  font-family: 'Raleway';
+  font-family: 'Tangerine';
   font-size: 72px;
-  color: black;
+  color: orangered;
   text-transform: uppercase;
+  animation-iteration-count: infinite;
   margin: 0 20px;
   float: left;
   opacity: 0.0;
-  animation: port 3s 1 forwards;
-  -webkit-animation: port 3s 1 forwards;
-    animation-iteration-count: infinite;
+  animation: port 3s 5 infinite forwards;
+  -webkit-animation: port 5s 5 infinite forwards;
+    
 }
 
 @keyframes port {
+   
+    
   0%{
     transform: rotateY(90deg) translateY(25%);
     opacity: 0.0;
@@ -200,7 +203,7 @@ div move {
     transform: rotateY(0deg) translateY(0%);
     opacity: 1.0;
   }
-   
+   animation-iteration-count: infinite;
 }
 
 @-webkit-keyframes port {
@@ -212,7 +215,7 @@ div move {
     -webkit-transform: rotateY(0deg) translateY(0%);
     opacity: 1.0;
   }
-    
+    animation-iteration-count: infinite;
 }
 
 .floating {  
@@ -222,6 +225,7 @@ div move {
     animation-timing-function: ease-in-out;
     margin-left: 30px;
     margin-top: 5px;
+    
 }
 
 @keyframes floating {
@@ -229,3 +233,59 @@ div move {
     65%  { transform: translate(0, 15px); }
     to   { transform: translate(0, -0px); }    
 }
+
+@-webkit-keyframes colorchange {
+      0% {
+        
+        color: red;
+      }
+      
+      10% {
+        
+        color: orangered;
+      }
+      
+      20% {
+        
+        color: darkorange;
+      }
+      
+      30% {
+        
+        color: red;
+      }
+      
+      40% {
+        
+        color: orangered;
+      }
+      
+      50% {
+        
+        color: darkorange;
+      }
+      
+      60% {
+        
+        color: red;
+      }
+      
+      70% {
+        
+        color: orangered;
+      }
+      80% {
+     
+        color: darkorange;
+      }
+      
+      90% {
+     
+        color: red;
+      }
+      
+      100% {
+        
+        color: darkred;
+      }
+    }
