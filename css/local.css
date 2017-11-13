@@ -39,7 +39,7 @@ body {
 .modalText {
     padding-left: 50px;
     font-size: 20px;
-    color: orange;
+   
     
 }
 
@@ -58,11 +58,10 @@ body {
 }
 
 .parallaxMainText{
-    font-family: 'Satisfy', serif;
+    font-family: 'Roboto', serif;
     font-size: 50pt;
-    color:orangered;
-     animation: colorchange 20s 5 infinite forwards;
-    -webkit-animation:colorchange 20s infinite alternate;
+    color:white;
+     
    
 }
 .headerLine{
@@ -92,7 +91,7 @@ body {
 
 .parallaxSubText{
     font-size: 30px;
-    color: orangered;
+    color: ghostwhite;
      -webkit-animation:colorchange 20s infinite alternate;
     
     
@@ -102,8 +101,8 @@ body {
   display: inline-block;
   width: 200px;
   padding: 8px;
-  color: orangered;
-  border: 2px solid orange;
+  color: ghostwhite;
+  border: 2px solid white;
   text-align: center;
   outline: none;
   text-decoration: none;
@@ -111,8 +110,8 @@ body {
               color 0.3s ease-out;
 }
 .ghostBorder:hover, ghostBorder:active {
-  color:orange;
-  border-color: orangered;
+  color:red;
+  border-color: red;
   transition: border-color 0.4s ease-in,
               color 0.4s ease-in;
 }
@@ -144,6 +143,7 @@ body {
 
 .nameHeading{
     font-size: 30px;
+    color:cyan;
 }
 
 .fullModal{
@@ -155,11 +155,11 @@ body {
     right: 300px !important;
 }
 
-@import 'https://fonts.googleapis.com/css?family=Tangerine:400,700';
+@import 'https://fonts.googleapis.com/css?family=Roboto:400,700';
 
 #replay{
   float: right;
-  font-family: 'Spectral-SC';
+  font-family: 'Roboto';
   font-size: 20px;
   color: black;
   text-transform: uppercase;
@@ -172,14 +172,13 @@ body {
 
 #port{
   clear: right;
-     animation: colorchange 20s 5 infinite forwards;
-    -webkit-animation:colorchange 20s infinite alternate;
+    
 }
 
 inside {
     
   display: inline-block;
-  font-family: 'Tangerine';
+  font-family: 'Roboto';
   font-size: 72px;
   color: orangered;
   text-transform: uppercase;
@@ -234,58 +233,5 @@ inside {
     to   { transform: translate(0, -0px); }    
 }
 
-@-webkit-keyframes colorchange {
-      0% {
-        
-        color: red;
-      }
-      
-      10% {
-        
-        color: orangered;
-      }
-      
-      20% {
-        
-        color: darkorange;
-      }
-      
-      30% {
-        
-        color: red;
-      }
-      
-      40% {
-        
-        color: orangered;
-      }
-      
-      50% {
-        
-        color: darkorange;
-      }
-      
-      60% {
-        
-        color: red;
-      }
-      
-      70% {
-        
-        color: orangered;
-      }
-      80% {
-     
-        color: darkorange;
-      }
-      
-      90% {
-     
-        color: red;
-      }
-      
-      100% {
-        
-        color: darkred;
-      }
-    }
+
+    
