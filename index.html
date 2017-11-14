@@ -45,7 +45,7 @@ Created by Thomas Musengwa and Triston Howard
 			<a href="#aboutUs" class="ghostBorder">About Us</a>
 			</div>
 			<div class="col s12 m4">
-			<a href="#ourTeam" onclick="ourTeam()" class="ghostBorder">Our Team</a>
+			<a href="#ourTeam" onclick="loop()" class="ghostBorder">Our Team</a>
 			</div>
 			<div class="col s12 m4">
 			<a href="#contactUs" class="ghostBorder">Contact Us</a>
@@ -83,30 +83,44 @@ Created by Thomas Musengwa and Triston Howard
       <h4 class="white-text">Our Team (Click Names to View Personal Projects) </h4>
     </div>
          <div class="row valign-wrapper">
-                 <div class="col s3"><img class=" square fullWidth" id="photo" src="" alt="triston"></div>
+                 <div class="col s3"><img class=" square fullWidth" id="photo1  " src="" alt="triston"></div>
                 <div class="col s9">
-                    <a href="#Triston">
+                    <a href="#Reetik">
                 <div class="formattedTitle">
-                    <div class="nameHeading red-text floatLeft space" id="Fname"></div>
-                    <div class="nameHeading red-text floatLeft" id="Lname"></div>
+                    <div class="nameHeading red-text floatLeft space" id="fName1"></div>
+                    <div class="nameHeading red-text floatLeft" id="lName1"></div>
                     <a class = "nameHeading red-text middle"> - </a>
-                    <div  class="nameHeading red-text floatLeft" id="title"></div>
+                    <div  class="nameHeading red-text floatLeft" id="title1"></div>
             </div></a>
-          <div class="profileDescription white-text" id="description"></div>
+          <div class="profileDescription white-text" id="description1"></div>
        </div>
       </div>
 
         <div class="row valign-wrapper">
-            <div class="col s3"><img class="square fullWidth" id="photo2" src="" alt="Thomas"></div>
+            <div class="col s3"><img class="square fullWidth" id="photo2" src="" alt="Reetik"></div>
             <div class="col s9">
                 <a href="#reetik">
                     <div class="formattedTitle">
-                        <div class="nameHeading red-text floatLeft space" id="Fname2"></div>
-                        <div class="nameHeading red-text floatLeft" id="Lname2"></div>
+                        <div class="nameHeading red-text floatLeft space" id="fName2"></div>
+                        <div class="nameHeading red-text floatLeft" id="lName2"></div>
                         <a class = "nameHeading red-text middle"> - </a>
                         <div  class="nameHeading red-text floatLeft" id="title2"></div>
                     </div></a>
                 <div class="profileDescription white-text" id="description2"></div>
+            </div>
+        </div>
+
+        <div class="row valign-wrapper">
+            <div class="col s3"><img class="square fullWidth" id="photo4" src="" alt="Thomas"></div>
+            <div class="col s9">
+                <a href="#thomas">
+                    <div class="formattedTitle">
+                        <div class="nameHeading red-text floatLeft space" id="fName4"></div>
+                        <div class="nameHeading red-text floatLeft" id="lName4"></div>
+                        <a class = "nameHeading red-text middle"> - </a>
+                        <div  class="nameHeading red-text floatLeft" id="title4"></div>
+                    </div></a>
+                <div class="profileDescription white-text" id="description4"></div>
             </div>
         </div>
 
@@ -116,28 +130,14 @@ Created by Thomas Musengwa and Triston Howard
                 <a href="#thomas">
                     <div class="formattedTitle">
                         <div class="nameHeading red-text floatLeft space" id="fName3"></div>
-                        <div class="nameHeading red-text floatLeft" id="Lname3"></div>
+                        <div class="nameHeading red-text floatLeft" id="lName3"></div>
                         <a class = "nameHeading red-text middle"> - </a>
                         <div  class="nameHeading red-text floatLeft" id="title3"></div>
                     </div></a>
                 <div class="profileDescription white-text" id="description3"></div>
             </div>
         </div>
-        <!---->
-        <!--<div class="row valign-wrapper">-->
-             <!--<div class="col s3"><img class="square fullWidth" src="" alt="Thomas"></div>-->
-        <!--<div class="col s9">-->
-            <!--<a href="#thomas"> <div class="nameHeading red-text">Thomas Musengwa - Senior Developer</div> </a>-->
-          <!--<div class="profileDescription white-text valign">Thomas is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a database background in programming and mainly focuses on app development projects. </div>-->
-       <!--</div> </div>-->
-        <!---->
-        <!--<div class="row valign-wrapper">-->
-             <!--<div class="col s3"><img class="square fullWidth" src="images/Reetik.JPG" alt="reetik"></div>-->
-        <!--<div class="col s9">-->
-            <!--<a href="#reetik"> <div class="nameHeading red-text">Reetik Patel - Senior Developer</div> </a>-->
-          <!--<div class="profileDescription white-text valign">Reetik is one of three senior developers for the Ignite IT Solutions strand. This is his second year in Ignite and his last in high school. He comes from a versatile background in programming and mainly focuses on software development as well as hardware tinkering. </div>-->
-       <!--</div> </div>-->
-        <!---->
+
         
         
     <div class="modal-footer grey darken-4">
@@ -172,14 +172,14 @@ Created by Thomas Musengwa and Triston Howard
       <h4 class="white-text">Contact Us</h4>
     </div>
        <div class="row">
-           <form id="contact" class="col s12">
+           <form id="newActivity" class="col s12">
                <div class="row">
                    <div class="input-field col s6">
-                       <input type="text" name="first_Name" title="first_Name" class="white-text validate">
+                       <input type="text" id = "first_Name" name="first_Name" title="first_Name" class="white-text validate">
                        <label>First Name</label>
                    </div>
                    <div class="input-field col s6">
-                       <input name="last_Name" type="text" title="last_Name" class="white-text validate">
+                       <input name="last_Name" id = "last_Name" type="text" title="last_Name" class="white-text validate">
                        <label>Last Name</label>
                    </div>
                    <div class="input-field col s6">
@@ -187,22 +187,24 @@ Created by Thomas Musengwa and Triston Howard
                        <label>Email</label>
                    </div>
                    <div class="input-field col s6">
-                       <input type="text" title="Message" class="white-text validate">
+                       <input type="text" id = "messages" title="message" class="white-text validate">
                        <label>Message</label>
                    </div>
+                   
                </div>
                <div type="text/plain" method="submit" action="submit">
 
                <div class="row">
                    <div class="col m6 s12">
-                       <button class="waves-effect waves-light grey darken-3 btn" form="contact" onclick="writeUserData()" type="submit" value="submit" name="submit">Submit</button>
-                   </div>
-               </div>
-               </div>
-           </form>
+                       
+<input id="saveForm" class="waves-effect waves-light grey darken-3 btn" name="saveForm" type="submit" >
+                       </input>
+                     </div>
+                  </div>     
+                </div>
+            </form>
        </div>
-
-       <div class="modal-footer grey darken-4">
+        <div class="modal-footer grey darken-4">
            <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat white-text">Back</a>
        </div>
 
