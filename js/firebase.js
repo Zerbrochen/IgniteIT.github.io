@@ -1,5 +1,5 @@
 //firebase.js
-var x = 0;
+var x = -20;
 var totalStudents; // number of total students
 
 
