@@ -43,14 +43,13 @@ function pull() {
 }
 
 // contact us forms (writes to db now)
-$(function(){
+$(function() {
 
     //make a variable to keep track of data coming from firebase
     var data = [];
 
     //create new connection to firebase
     var ref = firebase.database().ref('/userMessage/message/');
-
 
     //listen to data updates from firebase
 
@@ -60,7 +59,7 @@ $(function(){
         data = snapshot.val();
 
     })
-)}
+
     
    
     
@@ -92,7 +91,7 @@ $('#newActivity').submit(function(event) {
     "Last Name" : lName,
     "Email" : email,
     "Message" : theMessage
-  }
+}
   //put new object in data array
     data[data.length] = newActivity;
    
@@ -103,10 +102,9 @@ $('#newActivity').submit(function(event) {
         alert("Data no go");
       }
     });
-    setTimeout(function() { window.location.reload(); }, 4000);q
-    firebase.database().ref(student + '/photo').once('value').then(function(snapshot) {
-        console.log("photo URL = ", snapshot.val());
-        document.getElementById("photo" + x).src = snapshot.val();
-    });
-}
+    setTimeout(function() { window.location.reload(); }, 4000);
+
+    return false;
+    })
+})
 
