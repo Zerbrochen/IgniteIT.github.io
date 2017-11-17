@@ -13,24 +13,25 @@ function pull(arg) {
     console.log("test x = " + arg);
     var student = 'student' + arg;
     console.log(student);
+    var fName = "fName" + x;
 
     firebase.database().ref(student+ '/firstName').once('value').then(function (snapshot) {
         console.log("First Name =", snapshot.val());
-        document.getElementById("fName"+x).innerHTML = snapshot.val();
+        document.getElementById("fName" + arg).innerHTML = snapshot.val();
     });
     firebase.database().ref(student + '/lastName').once('value').then(function (snapshot) {
         console.log("Last Name =", snapshot.val());
-        document.getElementById("lName"+x).innerText = snapshot.val();
+        document.getElementById("lName" + arg).innerText = snapshot.val();
     });
 
     firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
         console.log("title = ", snapshot.val());
-        document.getElementById("title" + x).innerText = snapshot.val();
+        document.getElementById("title" + arg).innerText = snapshot.val();
     });
 
     firebase.database().ref(student + '/description').once('value').then(function (snapshot) {
         console.log("description = ", snapshot.val());
-        document.getElementById("description" + x).innerText = snapshot.val();
+        document.getElementById("description" + arg).innerText = snapshot.val();
 
     });
 }
