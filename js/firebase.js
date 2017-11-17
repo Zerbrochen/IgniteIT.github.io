@@ -1,27 +1,22 @@
 //firebase.js
-var x = -20;
 var totalStudents; // number of total students
 
 
 firebase.database().ref('/Students').once('value').then(function(snapshot){
     totalStudents = snapshot.val();
+    console.log("there are " + totalStudents + " students");
 });
 
 
-function loop() {
-    for(var i = 0; i < totalStudents; i++) {
-        x++;
-        console.log(x);
-        pull();
-    }
 
-}
-function pull() {
-    var student = 'student' + x;
+function pull(arg) {
+    console.log("test x = " + arg);
+    var student = 'student ' + arg;
     console.log(student);
 
     firebase.database().ref(student + '/firstName').once('value').then(function (snapshot) {
         console.log("First Name =", snapshot.val());
+        console.log("fName"+x);
         document.getElementById("fName" + x).innerHTML = snapshot.val();
     });
 
@@ -42,6 +37,15 @@ function pull() {
     });
 }
 
+function loop() {
+    var x = 0; //number of loops
+    while(x < totalStudents) {
+        x++;
+        console.log("x = " + x);
+        pull(x);
+    }
+}
+
 // contact us forms (writes to db now)
 $(function() {
 
@@ -58,7 +62,7 @@ $(function() {
         //when the data updates at firebase, put it in the data variable
         data = snapshot.val();
 
-    })
+    });
 
     
    
@@ -76,21 +80,21 @@ $('#newActivity').submit(function(event) {
   
   
   
-   var fName = $('#first_Name').val();
-  console.log(fName);
-    var lName = $('#last_Name').val();
-  console.log(lName);
-    var email = $('#email').val();
-  console.log(email);
-  var theMessage = $('#messages').val();
-  console.log(theMessage);
+   var in_fName = $('#first_Name').val();
+  console.log(in_fName);
+    var in_lName = $('#last_Name').val();
+  console.log(in_lName);
+    var in_email = $('#email').val();
+  console.log(in_email);
+  var in_theMessage = $('#messages').val();
+  console.log(in_theMessage);
   
   //take the values from the form, and put them in an object
   var newActivity= {
-    "First Name" : fName,
-    "Last Name" : lName,
-    "Email" : email,
-    "Message" : theMessage
+    "First Name" : in_fName,
+    "Last Name" : in_lName,
+    "Email" : in_email,
+    "Message" : in_theMessage
 }
   //put new object in data array
     data[data.length] = newActivity;
@@ -105,6 +109,6 @@ $('#newActivity').submit(function(event) {
     setTimeout(function() { window.location.reload(); }, 4000);
 
     return false;
-    })
-})
+    });
+});
 
