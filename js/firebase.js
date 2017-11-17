@@ -11,18 +11,16 @@ firebase.database().ref('/Students').once('value').then(function(snapshot){
 
 function pull(arg) {
     console.log("test x = " + arg);
-    var student = 'student ' + arg;
+    var student = 'student' + arg;
     console.log(student);
 
-    firebase.database().ref(student + '/firstName').once('value').then(function (snapshot) {
+    firebase.database().ref(student+ '/firstName').once('value').then(function (snapshot) {
         console.log("First Name =", snapshot.val());
-        console.log("fName"+x);
-        document.getElementById("fName" + x).innerHTML = snapshot.val();
+        document.getElementById("fName"+x).innerHTML = snapshot.val();
     });
-
     firebase.database().ref(student + '/lastName').once('value').then(function (snapshot) {
         console.log("Last Name =", snapshot.val());
-        document.getElementById("lName" + x).innerText = snapshot.val();
+        document.getElementById("lName"+x).innerText = snapshot.val();
     });
 
     firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
