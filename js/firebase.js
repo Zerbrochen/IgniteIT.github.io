@@ -32,7 +32,11 @@ function pull(arg) {
     firebase.database().ref(student + '/description').once('value').then(function (snapshot) {
         console.log("description = ", snapshot.val());
         document.getElementById("description" + arg).innerText = snapshot.val();
+    });
 
+    firebase.database().ref(student + '/photo').once('value').then(function (snapshot) {
+        console.log("photo = ", snapshot.val());
+        document.getElementById("photo" + arg).src = snapshot.val();
     });
 }
 
