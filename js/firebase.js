@@ -1,124 +1,72 @@
 //firebase.js
-var x = 0;
-function ourTeam(){
-    var fName;
-    var lName;
-    var title;
-    var description;
-    x++;
-    console.log(x);
-    firebase.database().ref('/student1/firstName').once('value').then(function(snapshot){
-        fName = snapshot.val();
-        console.log("Name =", snapshot.val());
-        document.getElementById("Fname").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student1/lastName').once('value').then(function(snapshot){
-        lName = snapshot.val();
-        console.log("Name =", snapshot.val());
-        document.getElementById("Lname").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student1/description').once('value').then(function(snapshot) {
-        description = snapshot.val();
-        console.log("description =", snapshot.val());
-        document.getElementById("description").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student1/title').once('value').then(function(snapshot) {
-        title = snapshot.val();
-    console.log("title = ", snapshot.val());
-        document.getElementById("title").innerText = snapshot.val();
-    });
-    firebase.database().ref('/student1/photo').once('value').then(function(snapshot) {
-        console.log("photo URL = ", snapshot.val());
-        document.getElementById("photo").src = snapshot.val();
-    });
-    Thomas();
-    retik(); 
-}
-// Import Admin SDK
-var database = firebase.database();
- 
+var totalStudents; // number of total students
+
+
+firebase.database().ref('/Students').once('value').then(function(snapshot){
+    totalStudents = snapshot.val();
+    console.log("there are " + totalStudents + " students");
+});
 
 
 
-function retik() {
-    var fName2;
-    var lName2;
-    var title2;
-    var description3;
-    firebase.database().ref('/student2/firstName').once('value').then(function(snapshot){
-        fName2 = snapshot.val();
-        console.log("Name =", snapshot.val());
-        document.getElementById("Fname2").innerHTML = snapshot.val();
+function pull(arg) {
+    console.log("test x = " + arg);
+    var student = 'student' + arg;
+    console.log(student);
+    var fName = "fName" + x;
+
+    firebase.database().ref(student+ '/firstName').once('value').then(function (snapshot) {
+        console.log("First Name =", snapshot.val());
+        document.getElementById("fName" + arg).innerHTML = snapshot.val();
     });
-    firebase.database().ref('/student2/lastName').once('value').then(function(snapshot){
-        lName2 = snapshot.val();
-        console.log("Name =", snapshot.val());
-        document.getElementById("Lname2").innerHTML = snapshot.val();
+    firebase.database().ref(student + '/lastName').once('value').then(function (snapshot) {
+        console.log("Last Name =", snapshot.val());
+        document.getElementById("lName" + arg).innerText = snapshot.val();
     });
-    firebase.database().ref('/student2/description').once('value').then(function(snapshot) {
-        description3 = snapshot.val();
-        console.log("description =", snapshot.val());
-        document.getElementById("description2").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student2/title').once('value').then(function(snapshot) {
-        title2 = snapshot.val();
+
+    firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
         console.log("title = ", snapshot.val());
-        document.getElementById("title2").innerText = snapshot.val();
+        document.getElementById("title" + arg).innerText = snapshot.val();
     });
-    firebase.database().ref('/student2/photo').once('value').then(function(snapshot) {
-        console.log("photo URL = ", snapshot.val());
-        document.getElementById("photo2").src = snapshot.val();
+
+    firebase.database().ref(student + '/description').once('value').then(function (snapshot) {
+        console.log("description = ", snapshot.val());
+        document.getElementById("description" + arg).innerText = snapshot.val();
+    });
+
+    firebase.database().ref(student + '/photo').once('value').then(function (snapshot) {
+        console.log("photo = ", snapshot.val());
+        document.getElementById("photo" + arg).src = snapshot.val();
     });
 }
 
-function Thomas() {
-    var fName3;
-    var lName3;
-    var title3;
-    var description3;
-    firebase.database().ref('/student3/firstName').once('value').then(function(snapshot){
-        fName3 = snapshot.val();
-        console.log("Name =", snapshot.val());
-        document.getElementById("Fname3").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student3/lastName').once('value').then(function(snapshot){
-        lName3 = snapshot.val();
-        console.log("Name =", snapshot.val());
-        document.getElementById("Lname3").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student3/description').once('value').then(function(snapshot) {
-        description3 = snapshot.val();
-        console.log("description =", snapshot.val());
-        document.getElementById("description3").innerHTML = snapshot.val();
-    });
-    firebase.database().ref('/student3/title').once('value').then(function(snapshot) {
-        title3 = snapshot.val();
-        console.log("title = ", snapshot.val());
-        document.getElementById("title3").innerText = snapshot.val();
-    });
-    firebase.database().ref('/student3/photo').once('value').then(function(snapshot) {
-        console.log("photo URL = ", snapshot.val());
-        document.getElementById("photo3").src = snapshot.val();
-    });
+function loop() {
+    var x = 0; //number of loops
+    while(x < totalStudents) {
+        x++;
+        console.log("x = " + x);
+        pull(x);
+    }
 }
 
 // contact us forms (writes to db now)
-$(function(){
-   
-  //make a variable to keep track of data coming from firebase
-  var data= [];
-  
-  //create new connection to firebase
-	var ref= firebase.database().ref('/userMessage/message/');
-  
+$(function() {
 
-  //listen to data updates from firebase
-	ref.on("value", function (snapshot){
-   
-   //when the data updates at firebase, put it in the data variable
-    data= snapshot.val();
-    
-  })
+    //make a variable to keep track of data coming from firebase
+    var data = [];
+
+    //create new connection to firebase
+    var ref = firebase.database().ref('/userMessage/message/');
+
+    //listen to data updates from firebase
+
+    ref.on("value", function (snapshot) {
+
+        //when the data updates at firebase, put it in the data variable
+        data = snapshot.val();
+
+    });
+
     
    
     
@@ -135,22 +83,22 @@ $('#newActivity').submit(function(event) {
   
   
   
-   var fName = $('#first_Name').val();
-  console.log(fName);
-    var lName = $('#last_Name').val();
-  console.log(lName);
-    var email = $('#email').val();
-  console.log(email);
-  var theMessage = $('#messages').val();
-  console.log(theMessage);
+   var in_fName = $('#first_Name').val();
+  console.log(in_fName);
+    var in_lName = $('#last_Name').val();
+  console.log(in_lName);
+    var in_email = $('#email').val();
+  console.log(in_email);
+  var in_theMessage = $('#messages').val();
+  console.log(in_theMessage);
   
   //take the values from the form, and put them in an object
   var newActivity= {
-    "First Name" : fName,
-    "Last Name" : lName,
-    "Email" : email,
-    "Message" : theMessage
-  }
+    "First Name" : in_fName,
+    "Last Name" : in_lName,
+    "Email" : in_email,
+    "Message" : in_theMessage
+}
   //put new object in data array
     data[data.length] = newActivity;
    
@@ -164,7 +112,6 @@ $('#newActivity').submit(function(event) {
     setTimeout(function() { window.location.reload(); }, 4000);
 
     return false;
-  })
-  
-})
+    });
+});
 
