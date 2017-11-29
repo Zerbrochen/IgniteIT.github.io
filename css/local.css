@@ -38,10 +38,9 @@ body {
 .img-container {
   min-height: 750px;
   background-image: url(../images/fire.gif);
-  background-size: 1200px 750px;
+  background-size: contain;
   overflow: hidden;
   width:100%;
-    
 }
 
 .modalText {

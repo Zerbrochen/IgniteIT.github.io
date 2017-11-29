@@ -13,25 +13,38 @@ function pull(arg) {
     console.log("test x = " + arg);
     var student = 'student' + arg;
     console.log(student);
-    var fName = "fName" + x;
 
-    firebase.database().ref(student+ '/firstName').once('value').then(function (snapshot) {
+    firebase.database().ref(student + '/firstName').once('value').then(function (snapshot) {
         console.log("First Name =", snapshot.val());
-        document.getElementById("fName" + arg).innerHTML = snapshot.val();
+        var div = document.createElement("div");
+        var t = document.createTextNode(snapshot.val());
+        div.appendChild(t);
+        document.body.appendChild(div);
+        console.log(div);
     });
+
     firebase.database().ref(student + '/lastName').once('value').then(function (snapshot) {
         console.log("Last Name =", snapshot.val());
-        document.getElementById("lName" + arg).innerText = snapshot.val();
+        var div = document.createElement("div");
+        var t = document.createTextNode(snapshot.val());
+        div.appendChild(t);
+        document.getElementById("lName" ).classlist.add("nameHeading red-text floatLeft space").appendChild(div);
     });
 
     firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
         console.log("title = ", snapshot.val());
-        document.getElementById("title" + arg).innerText = snapshot.val();
+        var div = document.createElement("div");
+        var t = document.createTextNode(snapshot.val());
+        div.appendChild(t);
+        document.getElementById("title"+ arg).appendChild(div);
     });
 
     firebase.database().ref(student + '/description').once('value').then(function (snapshot) {
         console.log("description = ", snapshot.val());
-        document.getElementById("description" + arg).innerText = snapshot.val();
+        var div = document.createElement("div");
+        var t = document.createTextNode(snapshot.val());
+        div.appendChild(t);
+        document.getElementById("description"+ arg).appendChild(div);
     });
 
     firebase.database().ref(student + '/photo').once('value').then(function (snapshot) {
@@ -39,6 +52,12 @@ function pull(arg) {
         document.getElementById("photo" + arg).src = snapshot.val();
     });
 }
+// function test() {
+//     var div = document.createElement("P");
+//     var t = document.createTextNode(fName);
+//     div.appendChild(t);
+//     document.getElementById("fName").appendChild(div);
+// }
 
 function loop() {
     var x = 0; //number of loops
@@ -46,6 +65,7 @@ function loop() {
         x++;
         console.log("x = " + x);
         pull(x);
+
     }
 }
 
