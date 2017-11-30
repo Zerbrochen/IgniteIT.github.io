@@ -8,7 +8,6 @@ firebase.database().ref('/Students').once('value').then(function(snapshot){
 });
 
 
-
 function pull(arg) {
     console.log("test x = " + arg);
     var student = 'student' + arg;
@@ -19,7 +18,7 @@ function pull(arg) {
         var div = document.createElement("div");
         var t = document.createTextNode(snapshot.val());
         div.appendChild(t);
-        document.body.appendChild(div);
+        document.getElementById("fName" + arg).appendChild(div);
         console.log(div);
     });
 
@@ -28,7 +27,7 @@ function pull(arg) {
         var div = document.createElement("div");
         var t = document.createTextNode(snapshot.val());
         div.appendChild(t);
-        document.getElementById("lName" ).classlist.add("nameHeading red-text floatLeft space").appendChild(div);
+        document.getElementById("lName" + arg).appendChild(div);
     });
 
     firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
