@@ -34,45 +34,45 @@ Created by Thomas Musengwa and Triston Howard
     <title> Ignite IT</title>
      <link rel="shortcut icon" type="image/x-icon" href="favicon.png" />
 </head>
+<body class="img-container valign-wrapper mainContent">
 
-<body>
-<div class = "headerLine fullWidth"></div> 
+
+<div class = "headerLine fullWidth"></div>
 <div class="img-container valign-wrapper mainContent " id="topID">
 
 	<div class=" headText fullWidth valign-wrapper moveOver right-align"></div>
 	<div class="center fullWidth marginTop ">
 		<div class="parallaxMainText floating ">
   <div id="port">Ignite IT Solutions</div>
-		
+
 		</div>
         
         
-		<div class="parallaxSubText"> Real, Relevant, 
+		<div id="plzwrk" class="parallaxSubText"> Real, Relevant,
 <span
      class="txt-rotate"
      data-period="2000"
      data-rotate='[ "Learning","Programming","Practices","Technology","People","Businesses"]'></span>
-			
+
 		</div>
-		<div class="row container marginDown">
-		
-			<div class="col s12 m4">
-			<a href="#aboutUs" class="ghostBorder">About Us</a>
+        <div class="row container marginDown">
+            <div class="col s12 m4">
+			    <a href="#aboutUs" class="ghostBorder">About Us</a>
 			</div>
 			<div class="col s12 m4">
-			<a href="#ourTeam" onclick="loop()" class="ghostBorder">Our Team</a>
+			    <a href="#ourTeam" onclick="loop()" class="ghostBorder">Our Team</a>
 			</div>
-			<div class="col s12 m4 ">
-			<a href="#contactUs" class="ghostBorder">Contact Us</a>
+			<div class="col s12 m4">
+			    <a href="#contactUs" class="ghostBorder">Contact Us</a>
 			</div>
-			
 		</div>
 	</div>		
     <div class = "footerLine fullWidth"></div> 
-	<div class="footer fullWidth "> 
+	<div class="footer fullWidth ">
+    </div>
 </div>
-</div>
-    
+
+
 	
 	 <!-- Modal Trigger -->
  
@@ -92,21 +92,30 @@ Created by Thomas Musengwa and Triston Howard
 
 
 <!--students-->
+<!--<script>-->
+    <!--function test() {-->
+        <!--var para = document.createElement("P");-->
+        <!--var t = document.createTextNode("This is a paragraph.");-->
+        <!--para.appendChild(t);-->
+        <!--document.getElementById("plzWrk").appendChild(para);-->
+    <!--}-->
+<!--</script>-->
 
     <div id="ourTeam" class="modal bottom-sheet grey darken-4">
     <div class="modal-content">
       <h4 class="red-text">Our Team </h4>
     </div>
-         <div class="row valign-wrapper ">
-                 <div class="col s3"><img class=" square fullWidth" id="photo1" src="" alt="triston"></div>
+         <div class="row valign-wrapper">
+                 <div class = "col s3"><img class=" square fullWidth" id="photo1" src="" ></div>
                 <div class="col s9">
-                    <a href="#Triston">
                 <div class="formattedTitle">
                     <div class="nameHeading red-text floatLeft space" id="fName1"></div>
+                    <!--<div id="fName1"></div>-->
                     <div class="nameHeading red-text floatLeft" id="lName1"></div>
+                    <!--<div class="" id="lName1"></div>-->
                     <a class = "nameHeading red-text middle"> - </a>
                     <div  class="nameHeading red-text floatLeft" id="title1"></div>
-                </div></a>
+                </div>
           <div class="profileDescription white-text" id="description1"></div>
        </div>
       </div>
@@ -114,14 +123,12 @@ Created by Thomas Musengwa and Triston Howard
         <div class="row valign-wrapper">
             <div class="col s3"><img class="square fullWidth" id="photo2" src="" alt="Reetik"></div>
             <div class="col s9">
-                <a href="#reetik">
                     <div class="formattedTitle">
                         <div class="nameHeading red-text floatLeft space" id="fName2"></div>
                         <div class="nameHeading red-text floatLeft" id="lName2"></div>
                         <a class = "nameHeading red-text middle"> - </a>
                         <div  class="nameHeading red-text floatLeft" id="title2"></div>
-
-                    </div></a>
+                    </div>
                 <div class="profileDescription white-text" id="description2"></div>
             </div>
         </div>
@@ -139,6 +146,8 @@ Created by Thomas Musengwa and Triston Howard
                 <div class="profileDescription white-text" id="description3"></div>
             </div>
         </div>
+
+
 
         
     <div class="modal-footer grey darken-4">
@@ -179,7 +188,6 @@ Created by Thomas Musengwa and Triston Howard
                    <div class="col m6 s12">
                  
 <input id="saveForm" class=" waves-effect waves-red btn-flat red-text" name="saveForm" type="submit" >
-                       </input>
                    </div>
                   </div>     
                 </div>
