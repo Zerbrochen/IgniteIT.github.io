@@ -4,17 +4,13 @@ var totalStudents; // number of total students
 
 firebase.database().ref('/Students').once('value').then(function(snapshot){
     totalStudents = snapshot.val();
-    console.log("there are " + totalStudents + " students");
 });
 
 
 function pull(arg) {
-    console.log("test x = " + arg);
     var student = 'student' + arg;
-    console.log(student);
 
     firebase.database().ref(student + '/firstName').once('value').then(function (snapshot) {
-        console.log("First Name =", snapshot.val());
         document.getElementById("fName" + arg).innerHTML = snapshot.val();
         // var div = document.createElement("div");
         // var t = document.createTextNode(snapshot.val());
@@ -24,7 +20,6 @@ function pull(arg) {
     });
 
     firebase.database().ref(student + '/lastName').once('value').then(function (snapshot) {
-        console.log("Last Name =", snapshot.val());
         document.getElementById("lName" + arg).innerHTML = snapshot.val();
         // var div = document.createElement("div");
         // var t = document.createTextNode(snapshot.val());
@@ -35,7 +30,6 @@ function pull(arg) {
     });
 
     firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
-        console.log("title = ", snapshot.val());
         document.getElementById("title" + arg).innerHTML = snapshot.val();
         // var div = document.createElement("div");
         // var t = document.createTextNode(snapshot.val());
@@ -46,7 +40,6 @@ function pull(arg) {
     });
 
     firebase.database().ref(student + '/description').once('value').then(function (snapshot) {
-        console.log("description = ", snapshot.val());
         document.getElementById("description" + arg).innerHTML = snapshot.val();
         // var div = document.createElement("div");
         // var t = document.createTextNode(snapshot.val());
@@ -57,7 +50,6 @@ function pull(arg) {
     });
 
     firebase.database().ref(student + '/photo').once('value').then(function (snapshot) {
-        console.log("photo = ", snapshot.val());
         document.getElementById("photo" + arg).src = snapshot.val();
     });
 }
@@ -74,7 +66,6 @@ function loop() {
 
     while(x < totalStudents) {
         x++;
-        console.log("x = " + x);
         pull(x);
     }
 }
