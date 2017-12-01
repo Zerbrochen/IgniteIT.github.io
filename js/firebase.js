@@ -15,35 +15,45 @@ function pull(arg) {
 
     firebase.database().ref(student + '/firstName').once('value').then(function (snapshot) {
         console.log("First Name =", snapshot.val());
-        var div = document.createElement("div");
-        var t = document.createTextNode(snapshot.val());
-        div.appendChild(t);
-        document.getElementById("fName" + arg).appendChild(div);
-        console.log(div);
+        document.getElementById("fName" + arg).innerHTML = snapshot.val();
+        // var div = document.createElement("div");
+        // var t = document.createTextNode(snapshot.val());
+        // div.appendChild(t);
+        // document.getElementById("fName" + arg).appendChild(div);
+        // console.log(div);
     });
 
     firebase.database().ref(student + '/lastName').once('value').then(function (snapshot) {
         console.log("Last Name =", snapshot.val());
-        var div = document.createElement("div");
-        var t = document.createTextNode(snapshot.val());
-        div.appendChild(t);
-        document.getElementById("lName" + arg).appendChild(div);
+        document.getElementById("lName" + arg).innerHTML = snapshot.val();
+        // var div = document.createElement("div");
+        // var t = document.createTextNode(snapshot.val());
+        // div.appendChild(t);
+        // document.getElementById("lName" + arg).appendChild(div);
+        // console.log(div);
+
     });
 
     firebase.database().ref(student + '/title').once('value').then(function (snapshot) {
         console.log("title = ", snapshot.val());
-        var div = document.createElement("div");
-        var t = document.createTextNode(snapshot.val());
-        div.appendChild(t);
-        document.getElementById("title"+ arg).appendChild(div);
+        document.getElementById("title" + arg).innerHTML = snapshot.val();
+        // var div = document.createElement("div");
+        // var t = document.createTextNode(snapshot.val());
+        // div.appendChild(t);
+        // document.getElementById("title"+ arg).appendChild(div);
+        // console.log(div);
+
     });
 
     firebase.database().ref(student + '/description').once('value').then(function (snapshot) {
         console.log("description = ", snapshot.val());
-        var div = document.createElement("div");
-        var t = document.createTextNode(snapshot.val());
-        div.appendChild(t);
-        document.getElementById("description"+ arg).appendChild(div);
+        document.getElementById("description" + arg).innerHTML = snapshot.val();
+        // var div = document.createElement("div");
+        // var t = document.createTextNode(snapshot.val());
+        // div.appendChild(t);
+        // document.getElementById("description"+ arg).appendChild(div);
+        // console.log(div);
+
     });
 
     firebase.database().ref(student + '/photo').once('value').then(function (snapshot) {
@@ -51,20 +61,21 @@ function pull(arg) {
         document.getElementById("photo" + arg).src = snapshot.val();
     });
 }
-// function test() {
-//     var div = document.createElement("P");
-//     var t = document.createTextNode(fName);
-//     div.appendChild(t);
-//     document.getElementById("fName").appendChild(div);
+
+// function useTemplate() {
+//     var myTemplate = document.getElementById('myTemplate'),
+//         normalContent = document.getElementById('normalContent'),
+//         clonedTemplate = myTemplate.content.cloneNode(true);
+//     normalContent.appendChild(clonedTemplate);
 // }
 
 function loop() {
     var x = 0; //number of loops
+
     while(x < totalStudents) {
         x++;
         console.log("x = " + x);
         pull(x);
-
     }
 }
 
